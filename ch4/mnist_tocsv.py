@@ -30,5 +30,5 @@ def to_csv(name, maxdata):
     lbl_f.close()
     img_f.close()
 
-to_csv('train', 99999)
-to_csv('t10k', 99999)
+to_csv('train', 10000)
+to_csv('t10k', 1000)
