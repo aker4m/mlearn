@@ -1,6 +1,9 @@
 import pandas as pd
 from sklearn import model_selection, svm, metrics
 from sklearn.grid_search import GridSearchCV
+import time
+
+t1 = time.time()
 
 train_csv = pd.read_csv('./mnist/train.csv')
 test_csv = pd.read_csv('./mnist/t10k.csv')
@@ -23,3 +26,6 @@ print('학습기 = ', clf.best_estimator_)
 pre = clf.predict(test_data)
 ac_score = metrics.accuracy_score(pre, test_label)
 print('정답률 = ', ac_score)
+
+t2 = time.time()
+print('실행시간 = ', t2-t1)

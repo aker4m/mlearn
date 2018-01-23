@@ -1,4 +1,7 @@
 import struct
+import time
+
+t1 = time.time()
 
 def to_csv(name, maxdata):
     lbl_f = open('./mnist/'+name+'-labels-idx1-ubyte', 'rb')
@@ -30,5 +33,10 @@ def to_csv(name, maxdata):
     lbl_f.close()
     img_f.close()
 
-to_csv('train', 10000)
-to_csv('t10k', 1000)
+to_csv('train', 5000)
+to_csv('t10k', 500)
+
+t2 = time.time()
+
+print('ok')
+print('실행시간 = ', t2-t1)
