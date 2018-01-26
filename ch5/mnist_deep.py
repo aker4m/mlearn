@@ -1,6 +1,8 @@
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
+import time
 
+t1 = time.time()
 mnist = input_data.read_data_sets('mnist/', one_hot = True)
 
 pixels = 28 * 28
@@ -89,3 +91,6 @@ with tf.Session() as sess:
 
     acc = sess.run(accuracy_step, feed_dict=test_fd)
     print('정답률 = ', acc)
+
+t2 = time.time()
+print('실행시간 = ', t2-t1)
