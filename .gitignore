@@ -9,3 +9,7 @@ ch6/toji.model
 ch6/toji.wakati
 ch6/wiki.txt
 ch6/wiki.wakati
+ch7/image/
+__pycache__
+ch6/newstext/data*.json
+ch6/wiki.model*
